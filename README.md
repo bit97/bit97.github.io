@@ -1,1 +1,1 @@
-Personal webpage. Forked from [this project](https://github.com/jekyllt/sustain).
+Personal webpage. Forked from [this project](http://github.com/jekyllt/sustain).

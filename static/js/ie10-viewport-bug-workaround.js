@@ -1,7 +1,7 @@
 /*!
  * IE10 viewport hack for Surface/desktop Windows 8 bug
  * Copyright 2014-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Licensed under MIT (http://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
 // See the Getting Started docs for more information:
