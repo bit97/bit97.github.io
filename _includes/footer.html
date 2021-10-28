@@ -1,7 +1,9 @@
 <footer>
     <div id="footer">
         <div class="container">
-            <div id="wcb" class="carbonbadge"></div><script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
+            {% if page.carbon %}
+                <div id="wcb" class="carbonbadge"></div><script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
+            {% endif %}
             <p class="text-muted">© All rights reserved. Powered by <a href="http://jekyllrb.com/">Jekyll</a> and
             <a href="http://www.github.com/jekyllt/sustain">sustain</a> with ♥</p>
         </div>
