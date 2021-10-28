@@ -11,12 +11,12 @@ safe: true
 
 
 # edit here to achieve your personal greatness
-url: http://bit97.github.io/
+url: https://bit97.github.io/
 baseurl: /
 title: Federico Bitondo
 author: Federico Bitondo
 description: Personal blog and resume
-avatar: profile_small.jpeg
+avatar: profile.jpeg
 email: federico.bitondo@gmail.com
 github: bit97
 
