@@ -19,6 +19,7 @@ description: Personal blog and resume
 avatar: profile.jpeg
 email: federico.bitondo@gmail.com
 github: bit97
+disqus: fbitondo
 
 
 # needed for travis-ci build
