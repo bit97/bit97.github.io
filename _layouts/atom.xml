@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="https://www.w3.org/2005/Atom">
   {% if page.grouptype == 'tag' %}
     <title type="text" xml:lang="en">Posts Tagged “{{ page.tag }}” – {{ site.title }}</title>
     <link type="application/atom+xml" rel="self" href="{{ site.url }}/tag/{{ page.tag | replace:' ','-' | downcase }}/atom.xml"/>
