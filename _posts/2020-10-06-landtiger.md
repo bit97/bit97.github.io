@@ -76,6 +76,17 @@ At the end of the day, we'll have a folder populated with a certain number or `.
 
 ### Image conversion
 
+The next step is to convert these files into a single **C-like** structure, that will be imported into the project.
+
+I choosed to proceed with tools freely available in (most of) Unix/Linux systems.
+
+{% highlight bash %}
+find . -name “*.raw” | xargs -r -I{} cat “{}” > video_merged
+xxd -i video_merged > array.h
+{% endhighlight %}
+
+The first command searches for raw frames and merge them all into a big raw file, while the second one [makes a dump](http://manpages.ubuntu.com/manpages/xenial/en/man1/xxd.1.html#:~:text=xxd%20creates%20a%20hex%20dump,of%20decoding%20to%20standard%20output.) of the input file and, finally, generates the **.h** array.
+
 
 
 
