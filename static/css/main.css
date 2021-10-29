@@ -92,6 +92,9 @@ body {
   max-width: 800px;
   text-align: center;
 }
+.container .h3 {
+  margin-bottom: 3ex;
+}
 .container .text-muted {
   margin: 20px 0;
 }
@@ -141,6 +144,7 @@ body {
 }
 .avatar {
   padding-top: 5%;
+  margin-bottom: 10%;
 }
 .blog-post{
   padding-top: 15px;
