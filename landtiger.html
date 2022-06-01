@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <meta name="author" content="Federico Bitondo" />
+    <meta name="description" content="Personal blog and resume">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/static/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/static/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/static/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/static/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/static/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/static/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/static/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/static/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/static/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/static/img/favicon//ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    
+      <title>DISPLAY – Simple LandTiger NXP LPC1768 video player</title>
+    
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+    crossorigin="anonymous">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	<!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200bold,400old" />
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="/static/css/syntax.css" />
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </head>
+  <!-- Main Body-->
+  <body>
+  <!-- Wrap all page content here -->
+  <div id="wrap">
+    <!-- Navbar header -->
+    <nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="http://bit97.github.io/"><i class="fa fa-home"></i></a>
+    </div>
+    <div id="navbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/blog">BLOG</a></li>
+        <li><a href="/projects">PROJECTS</a></li>
+        <li><a href="/static/pdf/cv.pdf" target="_blank">RESUME</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <div class="container">
+	<div class="blog-post">
+		<h3>
+		  <strong><a href="/landtiger.html">DISPLAY – Simple LandTiger NXP LPC1768 video player</a></strong>
+		</h3>
+	</div>
+	<div class="blog-title">
+		<h4>
+		October  6, 2020
+			&nbsp;&nbsp;
+			
+			 <span class="label label-success">Embedded</span>
+			
+			 <span class="label label-success">Landtiger</span>
+			
+			 <span class="label label-success">Video</span>
+			
+			 <span class="label label-success">C</span>
+			
+			 <span class="label label-success">ARM</span>
+			
+		</h4>
+	</div>
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<div class="blogpost">
+			  <blockquote>
+  <p>Based on <a href="http://cas.polito.it/NXP-LANDTIGER@PoliTo-University/?p=225">original post</a> written for a Computer Architecture university course</p>
+</blockquote>
+
+<h1 id="introduction">Introduction</h1>
+
+<p>I had the opportunity, during the first semester of my first master year at Politecnico di Torino, to get involved in a challenging experience based on developing extra features on a specific embedded system - used in the main course - trying to relax some constraints that are inevitably present on such these limited devices.</p>
+
+<p>The goal of my work was to introduce the capability of (rudimental) video playback on the installed touch-screen display.</p>
+
+<p>The device used is the <a href="https://copperhilltech.com/landtiger-nxp-lpc1768-development-board/">LandtTiger LPC1768</a> board with the connected <a href="https://cdn-shop.adafruit.com/datasheets/ILI9325.pdf">ILI9325</a> LCD screen (ILI9320 on some board).</p>
+
+<h3 id="expected-outcome">Expected outcome</h3>
+
+<p>During the first meetings with the professor we agreed that the desired behaviour of the application was to display a simple sequence of frames - at a fixed framerate and resolution - loaded somewhere in the device’s memory at compilation time.</p>
+
+<h3 id="starting-point">Starting point</h3>
+
+<p>Luckily, the display comes with a driver library that is in charge of initializing the screen’s registers and providing some APIs to display either text or filling single points with the passed color.</p>
+
+<p>However, the available functions were not enough for my purpose since plotting the frame one pixel at a time would have led in unacceptable framerates. So this was absolutely one of the intervention points.</p>
+
+<p>The other main point was to find out a way to first convert than load the short sequence of frames into the board’s memory.</p>
+
+<p>Let’s dive in.</p>
+
+<h1 id="converting-the-video">Converting the video</h1>
+
+<p>First of all I needed to find out a way to convert an input video in a compatible format. In order to do that, the most direct way – and the one I took – is to extract a sequence of frames from it and then print those extracted frames to the screen, with specific delay constraints.</p>
+
+<h3 id="extracting-frames">Extracting frames</h3>
+
+<p>For this purpose the choice fell on <em>ffmpeg</em> – an extremely powerful tool that converts and edits audio and video streams.</p>
+
+<blockquote>
+  <p><em>ffmpeg</em> is a quite big tool, used in many other environments. You may want to read the documentation to get better explanation over the used commands</p>
+</blockquote>
+
+<p>Starting from a regular video file, the two operation to be performed are</p>
+<ul>
+  <li><em>spatial cropping</em> in order to fit the screen size (and to meet the memory requirements as we’ll see)</li>
+  <li><em>time limitation</em> in order to extract a portion of the video (same requirements as before)</li>
+</ul>
+
+<p>Translated in <em>ffmpeg</em>:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ffmpeg <span class="nt">-i</span> <span class="k">${</span><span class="nv">INPUT_VIDEO</span><span class="k">}</span> <span class="nt">-vf</span> <span class="nv">scale</span><span class="o">=</span>”-2:<span class="k">${</span><span class="nv">HEIGHT</span><span class="k">}</span>,crop<span class="o">=</span><span class="k">${</span><span class="nv">WIDTH</span><span class="k">}</span>:<span class="k">${</span><span class="nv">HEIGHT</span><span class="k">}</span>” <span class="nt">-ss</span> <span class="k">${</span><span class="nv">START_TIME</span><span class="k">}</span> <span class="nt">-t</span> <span class="k">${</span><span class="nv">DURATION</span><span class="k">}</span> “<span class="k">${</span><span class="nv">VIDEO_NAME</span><span class="k">}</span>_cut.mp4”</code></pre></figure>
+
+<p>where the non-obvious parameter are <em>WIDTH</em> and <em>HEIGHT</em> since:</p>
+
+<ul>
+  <li>in the first part you can omit one of the two (by replacing with a -1 or -2 as appropriate)</li>
+  <li>in the crop part they must be consistent with the scaled down size above specified</li>
+</ul>
+
+<p>Now let’s actually extract the frames:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ffmpeg <span class="nt">-i</span> “<span class="k">${</span><span class="nv">VIDEO_NAME</span><span class="k">}</span>_cut.mp4” <span class="nt">-vf</span> <span class="nv">fps</span><span class="o">=</span>1/<span class="k">${</span><span class="nv">FRAME_OFFSET</span><span class="k">}</span> <span class="nt">-vcodec</span> rawvideo <span class="nt">-f</span> rawvideo <span class="nt">-pix_fmt</span> rgb565be <span class="nt">-f</span> image2 ./<span class="k">${</span><span class="nv">filename</span><span class="k">}</span>%03d.raw</code></pre></figure>
+
+<p>I will explain in detail some of the arguments of the previous command:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">fps=1/${FRAME_OFFSET}</code>: “take a frame from source every <em>FRAME_OFFSET</em> seconds”</li>
+  <li><code class="language-plaintext highlighter-rouge">rawvideo</code>: no header inserted, only pixel representation</li>
+  <li><code class="language-plaintext highlighter-rouge">-pix_fmt rgb565be</code>: the flow of data from the Board to the LCD is – in theory, see later – 16-bit based. What we are asking here is “I want every pixel to be represented in RGB 16 bit convention – Big Endian” (<a href="https://en.wikipedia.org/wiki/High_color#16-bit_high_color">more here</a>)</li>
+  <li>output frames will be saved with the .raw extension and with increasing numbers in the filename</li>
+</ul>
+
+<p>At the end of the day, we’ll have a folder populated with a certain number or <code class="language-plaintext highlighter-rouge">.raw</code> files, each representing a single frame of the sequence.</p>
+
+<h3 id="image-conversion">Image conversion</h3>
+
+<p>The next step is to convert these files into a single <strong>C-like</strong> structure, that will be imported into the project.</p>
+
+<p>I choosed to proceed with tools freely available in (most of) Unix/Linux systems.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">find <span class="nb">.</span> <span class="nt">-name</span> “<span class="k">*</span>.raw” | xargs <span class="nt">-r</span> <span class="nt">-I</span><span class="o">{}</span> <span class="nb">cat</span> “<span class="o">{}</span>” <span class="o">&gt;</span> video_merged
+xxd <span class="nt">-i</span> video_merged <span class="o">&gt;</span> array.h</code></pre></figure>
+
+<p>The first command searches for raw frames and merge them all into a big raw file, while the second one <a href="http://manpages.ubuntu.com/manpages/xenial/en/man1/xxd.1.html#:~:text=xxd%20creates%20a%20hex%20dump,of%20decoding%20to%20standard%20output.">makes a dump</a> of the input file and, finally, generates the <strong>.h</strong> array.</p>
+
+
+			   <hr>
+			   <div class="related-posts">
+				   <h5>Related Posts</h5>
+				   
+						<div class="row">
+							 <div class="col-sm-4 col-md-4 col-lg-4">
+								 <h6 style="text-align: right">
+								 	June  5, 2013
+								 </h6>
+							 </div>
+							 <div class="col-sm-8 col-md-8 col-lg-8">
+								 <h6 style="text-align: left">
+								 	<strong><a href="//post1.html">A Full and Comprehensive Style Test (HTML)</a></strong>
+								 </h6>
+							 </div>
+						</div>
+					
+						<div class="row">
+							 <div class="col-sm-4 col-md-4 col-lg-4">
+								 <h6 style="text-align: right">
+								 	May 27, 2013
+								 </h6>
+							 </div>
+							 <div class="col-sm-8 col-md-8 col-lg-8">
+								 <h6 style="text-align: left">
+								 	<strong><a href="//post2.html">Another markdown full cheatsheet demo (Markdown)</a></strong>
+								 </h6>
+							 </div>
+						</div>
+					
+						<div class="row">
+							 <div class="col-sm-4 col-md-4 col-lg-4">
+								 <h6 style="text-align: right">
+								 	April  2, 2013
+								 </h6>
+							 </div>
+							 <div class="col-sm-8 col-md-8 col-lg-8">
+								 <h6 style="text-align: left">
+								 	<strong><a href="//post3.html">Now some lorem ipsum</a></strong>
+								 </h6>
+							 </div>
+						</div>
+					
+			   </div>
+			</div>
+		</div>
+	</div>
+	
+<div class="disqus">
+    <div id="disqus_thread"></div>
+        <script>
+            /**
+            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+            
+            var disqus_config = function () {
+                this.page.url = page.url;
+                this.page.identifier = page.url + ':' + page.title;
+                this.page.title = page.title
+            };
+            
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://fbitondo-works.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</div>
+
+
+
+
+</div>
+
+
+  </div>
+  <!-- Footer -->
+  <footer>
+    <div id="footer">
+        <div class="container">
+            
+            <p class="text-muted">© All rights reserved. Powered by <a href="http://jekyllrb.com/">Jekyll</a> and
+            <a href="http://www.github.com/jekyllt/sustain">sustain</a> with ♥</p>
+        </div>
+    </div>
+</footer>
+<div class="footer"></div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
+    integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ=="
+    crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="/static/js/docs.min.js"></script>
+    <script src="/static/js/main.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/static/js/ie10-viewport-bug-workaround.js"></script>
+	  
+	  <!-- Mathjax Support -->
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+	  
+  </body>
+</html>
